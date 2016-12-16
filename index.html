@@ -1,100 +1,85 @@
 <!doctype html>
-<html lang="en">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<head>
-		<meta charset="utf-8">
+    <title>Static typing in web apps</title>
 
-		<title>Static typing in web apps</title>
+    <meta name="author" content="Siili">
 
-		<meta name="author" content="Siili">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="./style/siili-theme.css" id="theme">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="./style/siili-theme.css" id="theme">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h1>Static typing in web apps</h1>
+            on example of TypeScript and Elm
+        </section>
+        <section>
+            <h2>Agenda</h2>
+            <ol>
+                <li>Introduction.</li>
+                <li>Why do we need static typing?</li>
+                <li>Static typing in TypeScript based applications.</li>
+                <li>Writing web application in Elm.</li>
+                <li>Advantages and disadvantages of strong typing in Elm.</li>
+                <li>Conclusions.</li>
+            </ol>
+        </section>
+        <section>
+            <section>
+                <h2>Do we need static typing?</h2>
+            </section>
+            <section>
+                <h2>Dynamic typing - the theory</h2>
+                <ul>
+                    <li class="fragment">concise & readable = easy to maintain</li>
+                    <li class="fragment">modules' API should be obvious</li>
+                    <li class="fragment">unit tests instead of compiler</li>
+                </ul>
+            </section>
+            <section>
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+            </section>
+        </section>
+    </div>
+</div>
 
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+<script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        history: true,
 
-	<body>
-
-		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Static typing in web apps</h1>
-					on example of TypeScript and Elm
-				</section>
-				<section>
-					<h2>Agenda</h2>
-					<ol>
-						<li>Introduction.</li>
-						<li>Why do we need static typing?</li>
-						<li>Static typing in TypeScript based applications.</li>
-						<li>Writing web application in Elm.</li>
-						<li>Advantages and disadvantages of strong typing in Elm.</li>
-						<li>Conclusions.</li>
-					</ol>
-				</section>
-				<section>
-					<section>
-						<h2>Do we need static typing?</h2>
-					</section>
-					<section>
-						<h2>Dynamic typing - the theory</h2>
-						<ul>
-							<li class="fragment">concise & readable = easy to maintain</li>
-							<li class="fragment">modules' API should be obvious</li>
-							<li class="fragment">unit tests instead of compiler</li>
-						</ul>
-					</section>
-					<section>
-
-					</section>
-				</section>
-			</div>
-
-		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
-
-		<script>
-
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
-
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-
-		</script>
-
-	</body>
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function() {
+                hljs.initHighlightingOnLoad();
+            }
+            }
+        ]
+    });
+</script>
+</body>
 </html>
