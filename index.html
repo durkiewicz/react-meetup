@@ -70,12 +70,43 @@
             </section>
         </section>
         <section>
-            <h2>TypeScript - facts</h2>
-            <ul>
-                <li>1st release: 2012-10-01</li>
-                <li>Open source, maintained by Microsoft</li>
-                <li>transcompiled to JavaScript</li>
-            </ul>
+            <section>
+                <h2>TypeScript - facts</h2>
+                <ul>
+                    <li>1st release: 2012-10-01</li>
+                    <li>Open source, maintained by Microsoft</li>
+                    <li>transcompiled to JavaScript</li>
+                </ul>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    ## Integrating with 3rd party libs
+
+                    ```typescript
+                    declare namespace ProgressbarJs {
+                        class Circle {
+                            constructor(element?: Element);
+
+                            destroy(): void;
+
+                            setText(text:string|number): void;
+                        }
+                    }
+
+                    declare module "progressbar.js" {
+                        export = ProgressbarJs;
+                    }
+                    ```
+                </script>
+            </section>
+            <section>
+                <h2>React development</h2>
+                <ul>
+                    <li>Supports JSX syntax</li>
+                    <li>Interfaces instead of PropTypes</li>
+                    <li>Compile-time errors for components usages</li>
+                </ul>
+            </section>
         </section>
         <section>
             <section>
