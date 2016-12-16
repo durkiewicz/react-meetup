@@ -108,6 +108,97 @@
                 </ul>
             </section>
         </section>
+        <section data-markdown>
+            <script type="text/template">
+                ## ELM
+                - Functional Reactive Programming
+                - No runtime exceptions
+                - Clear syntax
+                - Strong / Static Typing
+                - Module system and core libraries
+            </script>
+        </section>
+        <script type="text/template">
+            ### Function declaration
+            ```elm
+            add : Int -> Int -> Int
+            add x y =
+              x + y
+            ```
+
+            ```elm
+            add : Int -> Int -> Int
+            add x y =
+              let
+                sum = a + b
+              in
+                sum
+            ```
+        </script>
+
+        <section data-markdown>
+            <script type="text/template">
+                ## Elm records and union types
+                ```elm
+                type alias User =
+                  { name : String
+                  , age : Int
+                  , gender: Gender
+                  }
+
+                type Gender
+                  = Male
+                  | Female
+
+                user : User
+                user =
+                  { name = "John"
+                  , age = 30
+                  , gender = Male
+                  }
+                ```
+            </script>
+        </section>
+
+
+        <section data-markdown>
+            <script type="text/template">
+                ## Banning Nulls
+                ```elm
+                type Maybe a = Nothing | Just a
+
+                type alias User =
+                  { name : String
+                  , age : Maybe Int
+                  }
+
+                canBuyAlcohol : User -> Bool
+                canBuyAlcohol user =
+                  case user.age of
+                    Nothing ->
+                      False
+
+                    Just age ->
+                      age >= 18
+                ```
+            </script>
+        </section>
+        <section data-markdown>
+            <script type="text/template">
+                ## Strongly typed HTML
+
+                ```elm
+                import Html exposing ( div, text )
+                import Html.Attributes exposing ( class )
+
+                sampleSection : Html
+                sampleSection =
+                  div
+                    [ class "section" ]
+                    [ text "Section 1" ]
+                ```
+            </script>
+        </section>
         <section>
             <section>
                 <h2>Comparison</h2>
