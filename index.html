@@ -27,8 +27,9 @@
 <div class="reveal">
     <div class="slides">
         <section>
-            <h1>Static typing in web apps</h1>
-            on example of TypeScript and Elm
+            <h1>Static typing in <br> web apps</h1>
+            <p>on example of TypeScript and Elm</p>
+            <small>Tomasz Białecki, Kamil Durkiewicz</small>
         </section>
         <section>
             <h2>Agenda</h2>
@@ -38,7 +39,7 @@
                 <li>Static typing in TypeScript based applications.</li>
                 <li>Writing web application in Elm.</li>
                 <li>Advantages and disadvantages of strong typing in Elm.</li>
-                <li>Conclusions.</li>
+                <li>Comparison.</li>
             </ol>
         </section>
         <section>
@@ -107,6 +108,11 @@
                     <li>Compile-time errors for components usages</li>
                 </ul>
             </section>
+        </section>
+        <section data-markdown>
+            <script type="text/template">
+                # ELM
+            </script>
         </section>
         <section data-markdown>
             <script type="text/template">
@@ -198,6 +204,32 @@
                     [ text "Section 1" ]
                 ```
             </script>
+        </section>
+        <section>
+            <h2>Enforced Semantic Versioning</h2>
+            <pre><code class="hljs lang-shell">$ elm-package diff elm-lang/core 4.0.5 5.0.0
+
+Comparing elm-lang/core 4.0.5 to 5.0.0...
+This is a MAJOR change.
+
+------ Changes to module Maybe - MAJOR ------
+
+Removed:
+oneOf : List (Maybe.Maybe a) -> Maybe.Maybe a
+
+Changed:
+- andThen : Maybe.Maybe a -> (a -> Maybe.Maybe b) -> Maybe.Maybe b
++ andThen : (a -> Maybe.Maybe b) -> Maybe.Maybe a -> Maybe.Maybe b</code></pre>
+        </section>
+        <section>
+            <h2>Static typing in ELM</h2>
+            <ul class="plus-minus">
+                <li><b>+</b> Once compiled - works</li>
+                <li><b>+</b> Cannot take a shortcut</li>
+                <li><b>+</b> Compiler is really helpful</li>
+                <li><b>&ndash;</b> Cannot easily pass objects from/to native</li>
+                <li><b>&ndash;</b> No reflection at all</li>
+            </ul>
         </section>
         <section>
             <section>
@@ -292,9 +324,23 @@
                             minutes
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            Breaking changes between versions
+                        </td>
+                        <td>
+                            no
+                        </td>
+                        <td>
+                            yes
+                        </td>
+                    </tr>
                     </tbody>
                 </table>
             </section>
+        </section>
+        <section>
+            <h1>Questions ? </h1>
         </section>
     </div>
 </div>

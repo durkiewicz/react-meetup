@@ -1329,3 +1329,14 @@ html:-moz-full-screen-ancestor {
 
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
+
+
+.reveal ul.plus-minus{
+  list-style:none;
+  margin: 0;
+  padding: 0;
+}
+.reveal ul.plus-minus li > b {
+    width: 0.875em;
+    display: inline-block;
+}
