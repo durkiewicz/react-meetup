@@ -76,8 +76,26 @@
                 <ul>
                     <li>1st release: 2012-10-01</li>
                     <li>Open source, maintained by Microsoft</li>
-                    <li>transcompiled to JavaScript</li>
+                    <li>Compiled to JavaScript</li>
+                    <li>Only a language (without frameworks)</li>
                 </ul>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    ## Strict behaviour is not by default
+
+                    ```json
+                    {
+                        "noImplicitReturns": true,
+                        "noImplicitAny": true,
+                        "noFallthroughCasesInSwitch": true,
+                        "noImplicitThis": true,
+                        "noUnusedLocals": true,
+                        "noUnusedParameters": true,
+                        "strictNullChecks": true
+                    }
+                    ```
+                </script>
             </section>
             <section data-markdown>
                 <script type="text/template">
@@ -269,6 +287,63 @@ Changed:
                         </tr>
                         <tr>
                             <td>
+                                Integrating with 3rd party libs
+                            </td>
+                            <td>
+                                easy
+                            </td>
+                            <td>
+                                hard
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Compilation speed
+                            </td>
+                            <td>
+                                seconds
+                            </td>
+                            <td>
+                                minutes
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Source maps
+                            </td>
+                            <td>
+                                yes
+                            </td>
+                            <td>
+                                no
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>TypeScript</th>
+                        <th>Elm</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Strictness
+                            </td>
+                            <td>
+                                Configurable, loose by default
+                            </td>
+                            <td>
+                                Strict
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 Type inference
                             </td>
                             <td>
@@ -291,50 +366,15 @@ Changed:
                         </tr>
                         <tr>
                             <td>
-                                Integrating with 3rd party libs
+                                Breaking changes between versions
                             </td>
                             <td>
-                                easy
+                                no
                             </td>
                             <td>
-                                hard
+                                yes
                             </td>
                         </tr>
-                    </tbody>
-                </table>
-            </section>
-            <section>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>&nbsp;</th>
-                        <th>TypeScript</th>
-                        <th>Elm</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>
-                            Compilation speed
-                        </td>
-                        <td>
-                            seconds
-                        </td>
-                        <td>
-                            minutes
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Breaking changes between versions
-                        </td>
-                        <td>
-                            no
-                        </td>
-                        <td>
-                            yes
-                        </td>
-                    </tr>
                     </tbody>
                 </table>
             </section>
