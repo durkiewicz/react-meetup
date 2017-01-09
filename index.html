@@ -83,6 +83,7 @@
                 <h2>TypeScript - facts</h2>
                 <ul>
                     <li>1st release: 2012-10-01</li>
+                    <li>currently in version 2.1</li>
                     <li>Open source, maintained by Microsoft</li>
                     <li>Compiled to JavaScript</li>
                     <li>Only a language (without frameworks)</li>
@@ -135,15 +136,16 @@
                 </ul>
             </section>
         </section>
-        <section data-markdown>
-            <script type="text/template">
-                # ELM
-            </script>
+        <section>
+            <h1 class="fragment">ELM</h1>
         </section>
         <section data-markdown>
             <script type="text/template">
                 ## ELM
+                - Language transpiled to JS
+                - Currently in version 0.18
                 - Functional Reactive Programming
+                - Precursor of Redux
                 - No runtime exceptions
                 - Clear syntax
                 - Strong / Static Typing
@@ -174,20 +176,18 @@
                 ## Elm records and union types
                 ```elm
                 type alias User =
-                  { name : String
+                  { userType : UserType
                   , age : Int
-                  , gender: Gender
                   }
 
-                type Gender
-                  = Male
-                  | Female
+                type UserType
+                  = Anonymous
+                  | Named String
 
                 user : User
                 user =
-                  { name = "John"
+                  { userType = Named "John"
                   , age = 30
-                  , gender = Male
                   }
                 ```
             </script>
@@ -254,7 +254,7 @@ Changed:
                 <li><b>+</b> Once compiled - works</li>
                 <li><b>+</b> Cannot take a shortcut</li>
                 <li><b>+</b> Compiler is really helpful</li>
-                <li><b>&ndash;</b> Cannot easily pass objects from/to native</li>
+                <li><b>&ndash;</b> Cannot easily pass objects from/to JS</li>
                 <li><b>&ndash;</b> No reflection at all</li>
             </ul>
         </section>
@@ -307,7 +307,7 @@ Changed:
                         </tr>
                         <tr>
                             <td>
-                                Compilation speed
+                                Compilation speed in mid-size project
                             </td>
                             <td>
                                 seconds
@@ -381,7 +381,18 @@ Changed:
                                 no
                             </td>
                             <td>
-                                yes
+                                yes (0.16 -> 0.17)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Learning for JS developers
+                            </td>
+                            <td>
+                                easy
+                            </td>
+                            <td>
+                                hard
                             </td>
                         </tr>
                     </tbody>
